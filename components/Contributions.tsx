@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/motion/Reveal";
+import { SpotlightCard } from "@/components/motion/SpotlightCard";
 
 const FEATURED = [
   {
@@ -51,7 +52,11 @@ export function Contributions() {
             delay={i * 0.06}
             className={item.span ? "md:col-span-2" : undefined}
           >
-            <article className="flex h-full flex-col gap-3 rounded-[10px] border border-line p-6 transition-colors hover:border-accent">
+            <SpotlightCard
+              as="article"
+              className="h-full rounded-[10px] border border-line transition-colors hover:border-accent"
+              contentClassName="flex h-full flex-col gap-3 p-6"
+            >
               <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                 <h3 className="text-lg font-medium tracking-tight">{item.repo}</h3>
                 <span className="rounded-[4px] bg-[color-mix(in_srgb,var(--accent)_12%,transparent)] px-2 py-0.5 font-mono text-[11px] uppercase tracking-wide text-accent-strong">
@@ -61,7 +66,7 @@ export function Contributions() {
               <p className="text-[14.5px] leading-relaxed text-ink-soft">
                 {item.description}
               </p>
-            </article>
+            </SpotlightCard>
           </Reveal>
         ))}
       </div>

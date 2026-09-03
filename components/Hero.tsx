@@ -2,6 +2,7 @@ import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { CodePanel } from "@/components/CodePanel";
 import { HeroEntrance } from "@/components/motion/HeroEntrance";
 import { NetworkGraphic } from "@/components/motion/NetworkGraphic";
+import { MagneticLink } from "@/components/motion/MagneticLink";
 
 export function Hero() {
   return (
@@ -25,13 +26,13 @@ export function Hero() {
 
             <HeroEntrance delay={0.16}>
               <div className="mt-8 flex flex-wrap items-center gap-3">
-                <a
+                <MagneticLink
                   href="mailto:okoliemeka19@gmail.com"
-                  className="rounded-[6px] bg-accent px-5 py-2.5 text-sm font-medium text-on-accent transition-transform hover:-translate-y-px"
+                  className="inline-block rounded-[6px] bg-accent px-5 py-2.5 text-sm font-medium text-on-accent"
                 >
                   Email me
-                </a>
-                <a
+                </MagneticLink>
+                <MagneticLink
                   href="https://github.com/Emeka000"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -39,7 +40,7 @@ export function Hero() {
                 >
                   View GitHub
                   <ArrowUpRight size={15} weight="bold" />
-                </a>
+                </MagneticLink>
               </div>
             </HeroEntrance>
           </div>

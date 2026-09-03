@@ -1,5 +1,7 @@
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { Reveal } from "@/components/motion/Reveal";
+import { MagneticLink } from "@/components/motion/MagneticLink";
+import { NetworkGraphic } from "@/components/motion/NetworkGraphic";
 
 const LINKS = [
   { label: "Email", value: "okoliemeka19@gmail.com", href: "mailto:okoliemeka19@gmail.com" },
@@ -14,8 +16,9 @@ const LINKS = [
 
 export function Contact() {
   return (
-    <section id="contact" className="bg-paper-raised">
-      <div className="mx-auto max-w-6xl px-6 py-20">
+    <section id="contact" className="relative overflow-hidden bg-paper-raised">
+      <NetworkGraphic />
+      <div className="relative mx-auto max-w-6xl px-6 py-20">
         <div className="grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:gap-16">
           <Reveal>
             <h2 className="text-3xl font-medium tracking-tight md:text-4xl">
@@ -25,12 +28,12 @@ export function Contact() {
               Open to blockchain and full-stack engineering work across
               Stellar, Starknet, and beyond. Based in Kaduna, Nigeria.
             </p>
-            <a
+            <MagneticLink
               href="mailto:okoliemeka19@gmail.com"
-              className="mt-7 inline-flex items-center gap-1.5 rounded-[6px] bg-accent px-5 py-2.5 text-sm font-medium text-on-accent transition-transform hover:-translate-y-px"
+              className="mt-7 inline-block rounded-[6px] bg-accent px-5 py-2.5 text-sm font-medium text-on-accent"
             >
               Email me
-            </a>
+            </MagneticLink>
           </Reveal>
 
           <Reveal delay={0.1}>

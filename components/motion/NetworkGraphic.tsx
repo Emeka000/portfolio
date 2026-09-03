@@ -86,11 +86,13 @@ export function NetworkGraphic() {
         PULSES.map(([a, b], i) => (
           <motion.circle
             key={`pulse-${i}`}
+            cx={NODES[a].x}
+            cy={NODES[a].y}
             r={2.5}
             fill="currentColor"
             animate={{
-              cx: [NODES[a].x, NODES[b].x],
-              cy: [NODES[a].y, NODES[b].y],
+              x: [0, NODES[b].x - NODES[a].x],
+              y: [0, NODES[b].y - NODES[a].y],
               opacity: [0, 1, 0],
             }}
             transition={{

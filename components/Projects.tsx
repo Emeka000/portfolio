@@ -1,12 +1,13 @@
 import { Reveal } from "@/components/motion/Reveal";
+import { SpotlightCard } from "@/components/motion/SpotlightCard";
 
 const PROJECTS = [
   {
-    title: "Decentralized Medical Records Platform",
+    title: "HealthChain",
     role: "Maintainer and Project Owner",
     period: "2025, Present",
     points: [
-      "Founder and lead maintainer of an open-source platform for secure, decentralized storage and sharing of medical records on the Stellar network.",
+      "Founder and lead maintainer of HealthChain, an open-source platform for secure, decentralized storage and sharing of medical records on the Stellar network.",
       "Own end-to-end technical direction: architecting application and smart-contract logic, scoping issues, reviewing community pull requests, and guiding contributors.",
       "Coordinate an open-source contributor workflow through GitHub, maintaining code quality and driving the project roadmap.",
     ],
@@ -37,7 +38,11 @@ export function Projects() {
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {PROJECTS.map((project, i) => (
             <Reveal key={project.title} delay={i * 0.08} className="h-full">
-              <article className="flex h-full flex-col gap-5 rounded-[10px] border border-line bg-paper p-7 transition-colors hover:border-accent">
+              <SpotlightCard
+                as="article"
+                className="h-full rounded-[10px] border border-line bg-paper transition-colors hover:border-accent"
+                contentClassName="flex h-full flex-col gap-5 p-7"
+              >
                 <div>
                   <p className="font-mono text-[12px] uppercase tracking-wide text-ink-faint">
                     {project.role}, {project.period}
@@ -63,7 +68,7 @@ export function Projects() {
                     </span>
                   ))}
                 </div>
-              </article>
+              </SpotlightCard>
             </Reveal>
           ))}
         </div>
