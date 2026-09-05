@@ -26,7 +26,7 @@ export function Contact() {
             </h2>
             <p className="mt-4 max-w-[42ch] text-ink-soft">
               Open to blockchain and full-stack engineering work across
-              Stellar, Starknet, and beyond. Based in Kaduna, Nigeria.
+              Stellar, Starknet, and beyond.
             </p>
             <MagneticLink
               href="mailto:okoliemeka19@gmail.com"

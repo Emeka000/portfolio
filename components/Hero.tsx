@@ -19,8 +19,8 @@ export function Hero() {
 
             <HeroEntrance delay={0.08}>
               <p className="mt-5 max-w-[46ch] text-lg text-ink-soft">
-                Software engineer in Kaduna, Nigeria, building full-stack and
-                on-chain products across the Stellar and Starknet ecosystems.
+                Software engineer building full-stack and on-chain products
+                across the Stellar and Starknet ecosystems.
               </p>
             </HeroEntrance>
 
